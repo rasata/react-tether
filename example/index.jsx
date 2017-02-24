@@ -91,7 +91,6 @@ class ComplexDemo extends Component {
         <div ref="example" className="drop-example">
           <div className="drop-scroll-content">
             <TetherComponent
-              renderElementTo="#tool-tip-container"
               ref="tethered-component"
               attachment={`${vertical} ${horizontal}`}
               constraints={[{
@@ -126,8 +125,7 @@ class ComplexDemo extends Component {
                   )
                 }
               >
-                {
-                  isOpen &&
+                { isOpen &&
                   <div
                     key="tethered"
                     style={{
@@ -136,8 +134,7 @@ class ComplexDemo extends Component {
                     }}
                   >
                     Dropped Content
-                    {
-                      toggleContent &&
+                    { toggleContent &&
                       <div>Can have state too :)</div>
                     }
                   </div>
@@ -156,8 +153,8 @@ class App extends Component {
   render () {
     return(
       <div>
-        <ComplexDemo />
-        <SimpleDemo />
+        <ComplexDemo/>
+        {/* <SimpleDemo/> */}
       </div>
     )
   }
